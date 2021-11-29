@@ -1,2 +1,2 @@
 # CP
-CP resources
+CP Resources.
