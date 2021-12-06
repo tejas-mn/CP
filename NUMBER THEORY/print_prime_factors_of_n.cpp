@@ -81,7 +81,7 @@ void printPrimeFactors(ll n)
     {
         while(n%i==0)
         {
-            cout<<i<<endl;
+            cout<<i<<end
             n=n/i;
         }
 
