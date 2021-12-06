@@ -66,13 +66,7 @@ void printPrimeFactors(ll n)
     if(n<=1) return;
 
     while(n%2==0)
-    {
-        cout<<2<<endl;
-        n=n/2;
-    }
-
-    while(n%3==0)
-    {
+    { {
         cout<<3<<endl;
         n=n/3;
     }
@@ -81,7 +75,7 @@ void printPrimeFactors(ll n)
     {
         while(n%i==0)
         {
-            cout<<i<<endl;
+            cout<<i<<en
             n=n/i;
         }
 
@@ -99,6 +93,4 @@ void printPrimeFactors(ll n)
 
 int main()
 {
-    printPrimeFactors(10);
-    return 0;
-}
+    printPrimeFactors
