@@ -1,0 +1,8 @@
+1) max gcd(a,b) , 1<=a<b<=n is when (a,b) = (n,n/2) for even , (n-1 , n-1/2) for odd
+2) lcm(a,b) + gcd(a,b) = x find any a,b => note : if x divides y , x also divides y-x so factors are (x , y-x)
+so if some k divides x => k divides x-k
+=>gcd(k,x-k)=k
+=>lcm(k,x-k) = x-k
+=>lcm + gcd = k + x-k = x so we can fix 1 as factor then ans is 1 and x-1 bcoz lcm(1,x-1) = x-1 and gcd(1 , x-1) = 1 so x-1+1 = >x
+
+3)
