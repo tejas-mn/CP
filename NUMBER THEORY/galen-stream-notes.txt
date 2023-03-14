@@ -5,4 +5,6 @@ so if some k divides x => k divides x-k
 =>lcm(k,x-k) = x-k
 =>lcm + gcd = k + x-k = x so we can fix 1 as factor then ans is 1 and x-1 bcoz lcm(1,x-1) = x-1 and gcd(1 , x-1) = 1 so x-1+1 = >x
 
+CONCLUSION : lcm(1,anything) = anything , gcd(1,anything) = 1
+
 3)
