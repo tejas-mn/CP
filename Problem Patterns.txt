@@ -1,0 +1,202 @@
+				<DSA/>
+-----------------------------------------------------------------------
+>NextPermuation :
+Next lexicographically greater permutation (So right side is most significant) of its integer
+Link:https://leetcode.com/submissions/detail/741919438/
+Eg: 1234 => 1243
+-Look for farthest increasing pair i.e 34 swap 3 with just greatest element towards right
+-sort everything towards right of 3 
+-----------------------------------------------------------------------
+
+-----------------------------------------------------------------------
+>Subsets/Combinations:
+[1,2,3]=>{ [][1][2][3][1,2][2,3][1,3][1,2,3] } 2^n subsets
+
+Using Recursion:
+
+
+Using Bits:
+
+-----------------------------------------------------------------------
+Priority Queue : CF : https://codeforces.com/contest/1728/submission/171357376
+BS+PQ : https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-96/problems/# minimize computers
+
+
+LeetCode:
+Maximum Product After K Increments
+--------------------------------------------------------------------------
+DP : 
+https://leetcode.com/problems/predict-the-winner/
+--------------------------------------------------------------------------
+when given to find NY SUCH PERMUTAION OBSERVE PATTERNS IN TEST CASES
+
+----------------------------------------------------------------------------------------------
+
+->Timeline/PrefixSums: pref[start]++ pref[end+1]--; pref[i]+=pref[i-1] gives no. of overlappng intervals
+LeetCode:
+Divide Intervals into Min no. of groups (max no. of overlapping intervals)
+Maximum Population Year
+Shifting letter II
+Min number of platforms
+Find the Middle Index in Array
+Sum of All Odd Length Subarrays
+Find Pivot Index
+Minimum Value to Get Positive Step by Step Sum
+Range Sum Query - Immutable
+----------------------------------------------------------------------------------------------
+
+->PrefArray & SuffixArray:
+Product of Array Except Self
+----------------------------------------------------------------------------------------------
+
+->MergeSort Logic: Intersection of two/multiple arrays LeetCode
+Merge Two Sorted Lists
+
+-----------------------------------------------------------------------------------------------
+->Pick/Not Pick - DP : House Robber
+Domino and Tromino Tiling
+Check if There is a Valid Partition For The Array
+
+------------------------------------------------------------------------------------------------
+->How far you can reach/ MaxReach:
+LeetCode:
+Partition Labels
+Jump Game II
+Minimum Number of Increments on Subarrays to Form a Target Array
+
+----------------------------------------------------------------------------------------------
+->Explore all combinations and choose best
+LeetCode:
+Maximum Rows Covered by Columns
+
+
+----------------------------------------------------------------------------------------------
+->Palindrome Logic : even chars left and right side in middle odd no. of chars
+LeetCode:
+Largest Palindromic Number
+
+----------------------------------------------------------------------------------------------
+-->Expand from Middle:
+Longest Palindromic Substring
+
+----------------------------------------------------------------------------------------------
+-> BFS : queue<index> , queue<TreeNode*>
+LeetCode:
+Jump Game III
+Range Sum of BST
+Is Graph Bipartite?
+Shortest Path in Binary Matrix
+
+-----------------------------------------------------------------------------------------------
+->Tree indegree:
+LeetCode:
+Minimum Height Trees
+
+----------------------------------------------------------------------------------------------
+-> Binary Search on Ans:
+LeetCode:
+Nth Magical Number
+Minimum Garden Perimeter to Collect Enough Apples
+Maximum White Tiles Covered by a Carpet (BS + PREFIXSUMS)
+Max consecutive ones II (BS + PREFIXSUMS)
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-96/problems/# minimize computers (BS+PQ , lazy addition)
+Koko Eating Bananas
+Maximum Candies Allocated to K Children
+GFG contest B problem : https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-100/problems# (sort according to diff (greedy)+ prefix sum + bs )
+soln : https://ideone.com/Z2APi8
+------------------------------------------------------------------------------------------------
+->Maps:
+Task Scheduler II
+Design a Number Container System
+Check if Number is a Sum of Powers of Three
+
+------------------------------------------------------------------------------------------------
+->Sort + greedy
+Maximum Number of Groups Entering a Competition
+Max Sum of a Pair With Equal Sum of Digits
+Successful Pairs of Spells and Potions
+Assign Cookie
+Two City Scheduling
+Merge Intervals
+Smallest Range II
+Mice and Cheese (Sort according to difference / pick k ele from r1[] with greater diff)
+-----------------------------------------------------------------------------------------------
+->Fast Slow Pointers
+Intersection of Two Linked Lists
+Find duplicate
+linked list cycle
+nth node from end
+midlle node
+odd even ll
+
+
+---------------------------------------------------------------------------------------------------
+->Permutaions : n*(n+1)/2 , nC2
+Number of Zero-Filled Subarrays
+Count Unreachable Pairs of Nodes in an Undirected Graph
+
+---------------------------------------------------------------------------------------------------
+->GCD
+Minimum Deletions to Make Array Divisible
+
+------------------------------------------------------------------------------------------------------------------------------
+->Divide and Conquer
+Partition Array Such That Maximum Difference Is K
+
+------------------------------------------------------------------------------------------------------
+->Monotonic Stack
+Daily Temp
+maximal sqaure / rectangle trapping rain water
+NGR / NGL / NSL / NSR
+Minimize Result by Adding Parentheses to Expression
+
+-----------------------------------------------------------------------------------------------------
+->DP:
+Predict the winner
+Number of ways cutting pizza (DP + 2d prefix sum)
+
+------------------------------------------------------------------------------------------------------
+->DFS:
+Check if There Is a Valid Parentheses String Path
+GFG contest  C problem : https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-100/problems# (sort according to diff (greedy)+ prefix sum + bs )
+
+----------------------------------------------------------------------------------------------------
+->Adhoc:
+Minimum Amount of Time to Fill Cups
+Maximum XOR After Operations
+Longest Binary Subsequence Less Than or Equal to K
+Sum of Numbers With Units Digit K
+Calculate Amount Paid in Taxes
+Replace Elements in an Array
+Maximum Number of Coins You Can Get
+Longest Substring with At Least K Repeating Characters
+Maximize the Topmost Element After K Moves
+
+--------------------------------------------------------------------------------------------------------
+=>Suffix Concept for calculating how man: https://www.codechef.com/submit/WEIRDSUBARR?tab=statement
+
+//dec[i] = startig from i (think from n-1) how many elements(how far you can go / length) that are strictly dec 
+//inc[i] = startig from i (think from n-1) how many elements(how far you can go / length) that are strictly inc
+
+//last single element both inc and dec
+dec[n-1] = inc[n-1] = 1;
+
+//from last populate inc[] and dec[] => similar to prefix concept but from end => suffix concept
+for(int i=n-2;i>=0;i--){
+    //strictly dec
+    dec[i] = (v[i] > v[i+1])?(dec[i+1] + 1):1;
+        
+    //strictly inc
+    inc[i] = (v[i] < v[i+1])?(inc[i+1] + 1):1;
+}
+-----------------------------------------------------------------------------------------------------
+=>Stacks: 
+
+O(n^2) to O(n) : if j loop depends on i it may be stack
+
+-----------------------------------------------------------------------------------------------------
+=>Sorting for values + Ordered DS for indexes (Set with lower_bound/upper_bound) : 
+=>Next greater 4 , Count Inversion
+when some element has fixed ans: Eg : There will always be one ans (False/0/-1) for fixed ele (min/max)
+When there is dependecy on index and value
+Similar to Binary Search Predicate function / Bs on ans 
