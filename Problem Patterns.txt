@@ -6,6 +6,7 @@ Link:https://leetcode.com/submissions/detail/741919438/
 Eg: 1234 => 1243
 -Look for farthest increasing pair i.e 34 swap 3 with just greatest element towards right
 -sort everything towards right of 3 
+Similar: https://atcoder.jp/contests/abc276/submissions/36264384
 -----------------------------------------------------------------------
 
 -----------------------------------------------------------------------
