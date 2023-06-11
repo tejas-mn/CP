@@ -203,6 +203,6 @@ When there is dependecy on index and value
 Similar to Binary Search Predicate function / Bs on ans 
 
 -----------------------------------------------------------------------------------------------------
-=> COLLISIONS | Think What Matters for calculating final ans and ignore what doesn't matter =>IGNORE COLLISION
+=> COLLISIONS | Think What Matters for calculating final ans and ignore what doesn't matter =>IGNORE COLLISION | ORDER OF FINAL POSITIONS WONT MATTER SO SORT
 -https://leetcode.com/contest/biweekly-contest-106/problems/movement-of-robots/
 -https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/
