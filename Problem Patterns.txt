@@ -201,3 +201,8 @@ O(n^2) to O(n) : if j loop depends on i it may be stack
 when some element has fixed ans: Eg : There will always be one ans (False/0/-1) for fixed ele (min/max)
 When there is dependecy on index and value
 Similar to Binary Search Predicate function / Bs on ans 
+
+-----------------------------------------------------------------------------------------------------
+=> COLLISIONS | Think What Matters for calculating final ans and ignore what doesn't matter =>IGNORE COLLISION
+-https://leetcode.com/contest/biweekly-contest-106/problems/movement-of-robots/
+-https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/
