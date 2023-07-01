@@ -9,6 +9,8 @@ Eg: 1234 => 1243
 Similar: https://atcoder.jp/contests/abc276/submissions/36264384
 -----------------------------------------------------------------------
 
+BITS : https://leetcode.com/discuss/interview-question/3695233/All-Types-of-Patterns-for-Bits-Manipulations-and-How-to-use-it
+https://leetcode.com/discuss/interview-question/3685049/25-variations-of-two-sum-question
 -----------------------------------------------------------------------
 >Subsets/Combinations:
 [1,2,3]=>{ [][1][2][3][1,2][2,3][1,3][1,2,3] } 2^n subsets
