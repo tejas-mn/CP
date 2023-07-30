@@ -97,6 +97,11 @@ Minimum Height Trees
 
 ----------------------------------------------------------------------------------------------
 -> Binary Search on Ans:
+
+FFFFTTTT - getFirstIndexWhereSomeCondition if good move to left else right :  ans will be right pointer
+TTTTFFFF - getLastIndexWhereSomeCondition if good move to right else left : ans will be left pointer
+Basic BS : https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-113/problems - C problem 
+
 LeetCode:
 Nth Magical Number
 Minimum Garden Perimeter to Collect Enough Apples
