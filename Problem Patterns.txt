@@ -101,6 +101,7 @@ Minimum Height Trees
 FFFFTTTT - getFirstIndexWhereSomeCondition if good move to left else right :  ans will be right pointer
 TTTTFFFF - getLastIndexWhereSomeCondition if good move to right else left : ans will be left pointer
 Basic BS : https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-113/problems - C problem 
+Soln: https://pastebin.com/PbSfpqvh
 
 LeetCode:
 Nth Magical Number
