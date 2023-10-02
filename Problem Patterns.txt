@@ -38,6 +38,7 @@ when given to find NY SUCH PERMUTAION OBSERVE PATTERNS IN TEST CASES
 ->Timeline/PrefixSums: pref[start]++ pref[end+1]--; pref[i]+=pref[i-1] gives no. of overlappng intervals
 LeetCode:
 Divide Intervals into Min no. of groups (max no. of overlapping intervals)
+Minimum number of platforms required for a railway (u need atleast max no. of overlapping intervals number of platforms)
 Maximum Population Year
 Shifting letter II
 Min number of platforms
