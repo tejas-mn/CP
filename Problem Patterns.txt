@@ -163,8 +163,19 @@ Minimize Result by Adding Parentheses to Expression
 
 -----------------------------------------------------------------------------------------------------
 ->DP:
-Predict the winner
+Predict the winner : Game Dp
 Number of ways cutting pizza (DP + 2d prefix sum)
+
+Form 1 : pick not + pick / subset sum / knapsack
+Form 2 : Ending Form - LCS/LIS ending at i, number of subsets ending at i with sum j, number of subsets with sum=target ending at i 
+Form 3 : LR / MultiSequence Dp - LCS, i->string A, j-> string B 
+Form 4 : Game Dp: current state is winning state if you go to a state that makes the opponent loose
+Form 5 : dp[level][lengthOfPrefixMatching] / Bitmask Dp / State Automata - finding no. of substrings where pattern "0100" is not substring 
+Form 6 : Dp on matrix 
+Form 7 : Matrix Chain Multiplication : Palindrome partitioning, solving for left and solving for right and then taking decision (postorder)
+Form 8 : Dp on Trees / Graphs
+Form 9 : Fibonacci, Catalan series
+Form 10 : Gneral recursive/backtaracking DP
 
 ------------------------------------------------------------------------------------------------------
 ->DFS:
