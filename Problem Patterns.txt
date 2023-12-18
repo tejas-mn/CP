@@ -68,6 +68,9 @@ LeetCode:
 Partition Labels
 Jump Game II
 Minimum Number of Increments on Subarrays to Form a Target Array
+1326. Minimum Number of Taps to Open to Water a Garden
+https://practice.geeksforgeeks.org/contest/gfg-weekly-coding-contest-133/problems - illuminate the hallways D problem
+Interview bit - activate the lights
 
 ----------------------------------------------------------------------------------------------
 ->Explore all combinations and choose best
