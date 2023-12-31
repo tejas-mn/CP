@@ -2,19 +2,19 @@
 using namespace std;
 
 int getBit(int n, int k){
-    return n & (1<<k)?1:0;
+    return n & (1LL<<k)?1:0;
 }
 
 int setBit(int n,int k){
-    return n | (1<<k);
+    return n | (1LL<<k);
 }
 
 int clearBit(int n,int k){
-    return n & (~(1<<k));
+    return n & (~(1LL<<k));
 }
 
 int toggleBit(int n,int k){
-    return n ^ (1<<k);
+    return n ^ (1LL<<k);
 }
 
 int off_RightMost_SetBit(int n){
