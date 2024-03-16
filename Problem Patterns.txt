@@ -34,6 +34,16 @@ https://leetcode.com/problems/predict-the-winner/
 when given to find NY SUCH PERMUTAION OBSERVE PATTERNS IN TEST CASES
 
 ----------------------------------------------------------------------------------------------
+->-1 +1 cancellation and prefix sum + map: 
+
+// When you are given only two (even) types of thing (here 0s and 1s) and if count or some property of each of those is equal (x no. of 0s and x no. of 1s) then :
+// x is common and only one value (here 0 ( obtained by cancelling equal counts)) is possible for some property (here sum of 1s and -1s (0s) )
+
+//this value of 0 (only single value) is used in map to know the distance between two such 0s (basically length of subarray having equal ones and zeroes)
+
+https://leetcode.com/problems/contiguous-array/
+------------
+
 
 ->Timeline/PrefixSums: pref[start]++ pref[end+1]--; pref[i]+=pref[i-1] gives no. of overlappng intervals
 https://leetcode.com/discuss/study-guide/2166045/
