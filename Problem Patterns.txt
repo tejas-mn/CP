@@ -240,3 +240,15 @@ Similar to Binary Search Predicate function / Bs on ans
 => COLLISIONS | Think What Matters for calculating final ans and ignore what doesn't matter =>IGNORE COLLISION | ORDER OF FINAL POSITIONS WONT MATTER SO SORT (i,j) and (j,i) are same
 -https://leetcode.com/contest/biweekly-contest-106/problems/movement-of-robots/
 -https://leetcode.com/problems/last-moment-before-all-ants-fall-out-of-a-plank/
+
+-------------------------------------------------------------------------------------------------------
+=> Number of swaps using cycle decomposition.
+
+Find the minimum number of swaps required to get the maximum number of inversions.
+Note: Two array elements arr[i] and arr[j] form an inversion if arr[i] > arr[j] and i < j.
+
+n = 4
+arr[] = [3, 11, 2, 5]
+Op: 3
+
+Explanation: After swapping 3 with 2, the resulting array is {2, 11, 3, 5}, then swap 2 with 5 to get {5, 11, 3, 2}. Finally, swap 5 with 11 to get {11, 5, 3, 2}, which has the maximum number of inversions.
