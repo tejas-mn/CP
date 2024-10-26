@@ -1,8 +1,7 @@
 /*
-Find distinct number of values in the list
-Sol: 
-1. Use set 
-2. Sort and Skip duplicates by skipping adjacent eq elements and pointing always to a distinct value
+
+Given n numbers
+Find max subarray sum - Kadene
 
 */
 
@@ -13,11 +12,11 @@ Sol:
 #define vi              vector<int>
 #define pb              push_back
 #define all(v)          v.begin(),v.end()
-#define count(v,n)      count(all(v), n)
 #define FOR(a,b)        for(int i=a;i<=b;i++)
 #define minv(v)         *min_element(all(v))
 #define maxv(v)         *max_element(all(v))
 #define FAST_IO         ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define DEBUG(x)        cout<<x<<endl
 using namespace std;
 
 const int inf           =1e9 + 10;
@@ -33,33 +32,22 @@ void solve()
 {
     int n;
     cin>>n;
-    set<int> s;
-    for(int i=0;i<n;i++){
-        int x; cin>>x;
-        s.insert(x);
-    }
-    cout<<s.size()<<endl;
-    return ;
-}
+    vector<ll> v(n);
 
-void solve1(){
-    int n; 
-    cin>>n; 
-    vector<int> v(n);
     for(int i=0;i<n;i++) cin>>v[i];
-    int ans  = 0;
-    sort(all(v));
 
-    int j = 0;
-
-    while(j<n){
-        ans++;
-        j++;
-
-        while(j > 0 && v[j] == v[j-1]) j++;
+    ll max_till_now = v[0];
+    ll max_so_far = max_till_now;
+    
+    for(int i=1;i<n;i++)
+    {
+        max_till_now = max(v[i], max_till_now + v[i]);
+        max_so_far = max(max_so_far, max_till_now);
     }
 
-    cout<<ans<<endl;
+    DEBUG(max_so_far);
+    
+    return ;
 }
 
 int main()
@@ -77,7 +65,7 @@ int main()
     t=1;
     //cin>>t;
     while(t-->0){
-        solve1();
+        solve();
     }
     return 0;
 }

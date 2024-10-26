@@ -1,8 +1,9 @@
 /*
-Find distinct number of values in the list
-Sol: 
-1. Use set 
-2. Sort and Skip duplicates by skipping adjacent eq elements and pointing always to a distinct value
+Given {start, end} of n movies
+What is the maximum number of movies you can watch
+
+Sol: To watch max number of movies I need to watch movies that end sooner and no overlap
+So Sort according to ending times and count non overlapping intervals
 
 */
 
@@ -18,6 +19,7 @@ Sol:
 #define minv(v)         *min_element(all(v))
 #define maxv(v)         *max_element(all(v))
 #define FAST_IO         ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define DEBUG(x)        cout<<x<<endl
 using namespace std;
 
 const int inf           =1e9 + 10;
@@ -33,33 +35,35 @@ void solve()
 {
     int n;
     cin>>n;
-    set<int> s;
-    for(int i=0;i<n;i++){
-        int x; cin>>x;
-        s.insert(x);
+    vector<pair<int,int>> vp(n);
+
+    int ans = 1;
+
+    for(int i=0;i<n;i++)
+    {
+        int s,e; 
+        cin>>s>>e;
+        vp[i].first = s;
+        vp[i].second = e;
     }
-    cout<<s.size()<<endl;
+
+    sort(all(vp), [](auto p1, auto p2){
+        return p1.second < p2.second;
+    });
+
+    int end = vp[0].second;
+
+    for(int i=1;i<n;i++)
+    {
+        if(vp[i].first >= end){
+            end = vp[i].second;
+            ans++;
+        }
+    }
+
+    DEBUG(ans);
+
     return ;
-}
-
-void solve1(){
-    int n; 
-    cin>>n; 
-    vector<int> v(n);
-    for(int i=0;i<n;i++) cin>>v[i];
-    int ans  = 0;
-    sort(all(v));
-
-    int j = 0;
-
-    while(j<n){
-        ans++;
-        j++;
-
-        while(j > 0 && v[j] == v[j-1]) j++;
-    }
-
-    cout<<ans<<endl;
 }
 
 int main()
@@ -77,7 +81,7 @@ int main()
     t=1;
     //cin>>t;
     while(t-->0){
-        solve1();
+        solve();
     }
     return 0;
 }

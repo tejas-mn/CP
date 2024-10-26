@@ -1,8 +1,7 @@
 /*
-Find distinct number of values in the list
-Sol: 
-1. Use set 
-2. Sort and Skip duplicates by skipping adjacent eq elements and pointing always to a distinct value
+
+Given n numbers
+Find 2 distinct positions of 2 numbers that sum to x
 
 */
 
@@ -13,11 +12,11 @@ Sol:
 #define vi              vector<int>
 #define pb              push_back
 #define all(v)          v.begin(),v.end()
-#define count(v,n)      count(all(v), n)
 #define FOR(a,b)        for(int i=a;i<=b;i++)
 #define minv(v)         *min_element(all(v))
 #define maxv(v)         *max_element(all(v))
 #define FAST_IO         ios::sync_with_stdio(0); cin.tie(0); cout.tie(0);
+#define DEBUG(x)        cout<<x<<endl
 using namespace std;
 
 const int inf           =1e9 + 10;
@@ -31,35 +30,75 @@ const int N             =1e5+10;
 
 void solve()
 {
-    int n;
-    cin>>n;
-    set<int> s;
-    for(int i=0;i<n;i++){
-        int x; cin>>x;
-        s.insert(x);
+    int n, target;
+    cin>>n>>target;
+    vector<int> v(n);
+
+    for(int i=0;i<n;i++) cin>>v[i];
+
+    map<int,int> mp;
+
+    for(int i=0;i<n;i++)
+    {
+        if(mp.count(target-v[i]) > 0 && (mp[target - v[i]]-1 != i))
+        {
+            cout<<mp[target - v[i]]<<" "<<i+1<<endl;
+            return;
+        }
+        mp[v[i]] = i+1;
     }
-    cout<<s.size()<<endl;
+    DEBUG("IMPOSSIBLE");
     return ;
 }
 
 void solve1(){
-    int n; 
-    cin>>n; 
+    int n, target;
+    cin>>n>>target;
     vector<int> v(n);
+
     for(int i=0;i<n;i++) cin>>v[i];
-    int ans  = 0;
+    vector<int> tmp = v;
+    
     sort(all(v));
+    
+    int l = 0;
+    int r = n-1;
 
-    int j = 0;
+    int x = -1;
+    int y = -1;
 
-    while(j<n){
-        ans++;
-        j++;
+    while(l<r){
+        if(v[l] + v[r] == target){
+            x = v[l]; y = v[r];
+            break;
+        }else if(v[l] + v[r] > target){
+            r--;
+        }else{
+            l++;
+        }
+    }
+    
+    if(x!=-1 && y!=-1){
+        int j = -1;
+        int k = -1;
+        for(int i=0;i<n;i++){
+            if(tmp[i] == x){
+                j = i;
+            }
+        }
+        
+        for(int i=0;i<n;i++){
+            if(tmp[i] == y && j!=i){
+                k = i;
+            }
+        }
 
-        while(j > 0 && v[j] == v[j-1]) j++;
+        cout<<j+1<<" "<<k+1<<endl;
+        return;
     }
 
-    cout<<ans<<endl;
+    DEBUG("IMPOSSIBLE");
+
 }
 
 int main()
